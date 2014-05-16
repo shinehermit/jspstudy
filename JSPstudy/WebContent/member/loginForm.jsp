@@ -20,23 +20,8 @@
 			form.passwd.focus();
 			return;
 		}
-		if(form.name.value  == ""){
-			alert("이름을 입력하십시오!");
-			form.name.focus();
-			return;
-		}
-		
-		if(form.phone.value == ""){
-			alert("전화번호를 입력하십시오!");
-			form.phone.focus();
-			return;
-		}
-		if(form.phone.value.search(/^[0-9]+$/)){
-			alert("숫자만 입력하십시오!");
-			form.phone.focus();
-			return;
-		}
-		form.action="/member/join.jsp";
+	
+		form.action="/member/login.jsp";
 		form.submit();
 	}
 

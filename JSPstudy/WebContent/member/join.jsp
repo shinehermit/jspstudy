@@ -4,8 +4,10 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String mid = request.getParameter("mid");
+	String passwd = request.getParameter("passwd");
 	String name = request.getParameter("name");
 	String phone = request.getParameter("phone");
+	
 	String ip = request.getRemoteAddr();
 	
 	Connection conn = null;
@@ -19,11 +21,12 @@
 		<%
 		
 		conn = DriverManager.getConnection(url,id,pass);
-		pstmt = conn.prepareStatement("INSERT INTO tmember ( id, name, phone, regDate) VALUES ( ?, ?, ?,NOW())");
+		pstmt = conn.prepareStatement("INSERT INTO tMember ( id, passwd, name, phone, regDate) VALUES ( ?, ?, ?, ?,NOW())");
 		
 		pstmt.setString(1, mid);
-		pstmt.setString(2, name);
-		pstmt.setString(3, phone);
+		pstmt.setString(2, passwd);
+		pstmt.setString(3, name);
+		pstmt.setString(4, phone);
 				
 		pstmt.executeUpdate();
 		
