@@ -20,7 +20,7 @@
 		<%
 		
 		conn = DriverManager.getConnection(url,id,pass);
-		pstmt = conn.prepareStatement("INSERT INTO tboard ( subject, writer, contents, empNo, regDate ) VALUES ( ?, ?, ?, ? ,NOW())");
+		pstmt = conn.prepareStatement("INSERT INTO tBoard ( subject, writer, contents, empNo, regDate ) VALUES ( ?, ?, ?, ? ,NOW())");
 		
 		pstmt.setString(1, subject);
 		pstmt.setString(2, writer);
