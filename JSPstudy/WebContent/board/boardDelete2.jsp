@@ -17,7 +17,7 @@
 		
 		conn = DriverManager.getConnection(url,id,pass);
 		
-		String sql = "DELETE FROM tboard WHERE boardNo ="+boardNo;
+		String sql = "DELETE FROM tBoard WHERE boardNo ="+boardNo;
 		stmt = conn.createStatement(); 
 		
 		stmt.executeUpdate(sql);

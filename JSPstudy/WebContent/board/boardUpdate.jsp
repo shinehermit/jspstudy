@@ -24,7 +24,7 @@
 		<%
 		
 		conn = DriverManager.getConnection(url,id,pass);
-		pstmt = conn.prepareStatement("UPDATE tboard SET subject=?, writer=?, contents=? , empNo=?, regDate=NOW() where boardNo=?");
+		pstmt = conn.prepareStatement("UPDATE tBoard SET subject=?, writer=?, contents=? , empNo=?, regDate=NOW() where boardNo=?");
 		
 		pstmt.setString(1, subject);
 		pstmt.setString(2, writer);

@@ -25,7 +25,7 @@
 		conn = DriverManager.getConnection(url,id,pass);
 		stmt = conn.createStatement(); 
 		
-		String sql = "UPDATE tboard SET subject='"+subject +"', writer='"+writer+"', contents='"+contents +"', empNo='"+empNo +"', regDate=NOW() where boardNo="+boardNo;
+		String sql = "UPDATE tBoard SET subject='"+subject +"', writer='"+writer+"', contents='"+contents +"', empNo='"+empNo +"', regDate=NOW() where boardNo="+boardNo;
 		
 		stmt.executeQuery(sql);
 		

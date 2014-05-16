@@ -16,7 +16,7 @@
 		<%
 		
 		conn = DriverManager.getConnection(url,id,pass);
-		pstmt = conn.prepareStatement("DELETE FROM tboard WHERE boardNo ="+boardNo);
+		pstmt = conn.prepareStatement("DELETE FROM tBoard WHERE boardNo ="+boardNo);
 		
 		pstmt.executeUpdate();
 		
