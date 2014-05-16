@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" version="2.4">
+	<display-name>9장 예제</display-name>
+	<description>
+		9장의 예제 소스 코드 및 실행코드
+	</description>
+	<session></session>
+</web-app>
