@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판 입력폼</title>
 <script type="text/javascript">
-	function memberJoinCheck(){
+	function memberLoginCheck(){
 		
-		var form = document.memberJoinForm;
+		var form = document.memberLoginForm;
 		
 		if(form.mid.value == ""){
 			alert("아이디를 입력하십시오!");
@@ -21,14 +21,14 @@
 			return;
 		}
 	
-		form.action="/member/login.jsp";
+		form.action="/member/sessionLogin.jsp";
 		form.submit();
 	}
 
 </script>
 </head>
 <body>
-	<form name="memberJoinForm" method="post">
+	<form name="memberLoginForm" method="post">
 	<table border ="1" summary="가입폼">
 	<caption>
 	가입폼
@@ -47,18 +47,10 @@
 			<th align="center">암호</th>
 			<td><input name="passwd" type="password" maxlength="20" ></td>
 		</tr>
-		<tr>
-			<th align="center">이름</th>
-			<td><input name="name" type="text" maxlength="10"  /></td>
-		</tr>
-		<tr>
-			<th align="center">전화번호</th>
-			<td><input name="phone" type="text" maxlength="14"/></td>
-		</tr>		
 	</tbody>
 	</table>
 	<p>
-		<a href="javascript:memberJoinCheck();">[가입]</a>
+		<a href="javascript:memberLoginCheck();">[로그인]</a>
 	</p>
 	</form>
 </body>
